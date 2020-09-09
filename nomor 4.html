@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    document.write("---Panjang---");
+        const cetak_gambar = (n) => {
+        if(n%2 === 0){
+        console.log ("ERROR!!! Input Number Must Be An Odd Number!");
+    } else {
+
+        for(let row=0; row < n; row++){
+            let lines = "<br>";
+
+            for(let col=0; col<n; col++){
+                if(col === 0 || col === n-1){
+                    lines += '\n\*';
+                } else if(row === Math.floor(n/2)){
+                    lines += '\n\*';
+                } else {
+                    lines += '\n\=';
+                }
+            }
+            document.write(lines);
+        }
+    }
+};
+
+cetak_gambar(5);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
